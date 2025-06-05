@@ -21,6 +21,7 @@ const navLinks = [
       { title: 'Laparoscopy', href: '/services/laparoscopy' },
       { title: 'Antenatal Care', href: '/services/antenatal-care' },
       { title: 'Well Women Health', href: '/services/well-women-health' },
+      { title: 'Health Packages', href: '/packages' }
     ]
   },
   { title: 'Blog', href: '/blog', icon: FileText },

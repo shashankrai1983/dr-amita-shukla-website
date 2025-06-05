@@ -66,6 +66,11 @@ const Footer = () => {
                   Well Women Health
                 </Link>
               </li>
+              <li>
+                <Link href="/packages" className="hover:text-primary-green transition-colors">
+                  Health Packages
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -86,6 +91,11 @@ const Footer = () => {
               <li>
                 <Link href="/contact" className="hover:text-primary-green transition-colors">
                   Book Appointment
+                </Link>
+              </li>
+              <li>
+                <Link href="/gallery" className="hover:text-primary-green transition-colors">
+                  Gallery
                 </Link>
               </li>
               <li>
