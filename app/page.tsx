@@ -22,6 +22,7 @@ import TestimonialSlider from '@/components/home/testimonial-slider';
 import StatCounter from '@/components/home/stat-counter';
 import ServiceCard from '@/components/home/service-card';
 import HospitalGallery from '@/components/home/hospital-gallery';
+import FaqSection from '@/components/home/faq-section';
 import { GridPattern } from '@/components/ui/grid-pattern';
 
 export default function Home() {
@@ -473,6 +474,9 @@ export default function Home() {
         
         {/* Grid Pattern background removed */}
       </section>
+
+      {/* FAQ Section */}
+      <FaqSection />
 
       {/* Appointment CTA */}
       <section className="py-20 bg-primary-green/10 relative">
