@@ -1,5 +1,5 @@
 // components/home/faq-section.tsx
-// Changes: Updated FAQ category headings to have green background with white text
+// Changes: Updated FAQ category headings to use jungle green (forest-green) background instead of olive green
 "use client";
 
 import { useRef } from 'react';
@@ -181,7 +181,7 @@ const FaqSection = () => {
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               className="bg-accent-cream/30 rounded-xl shadow-warm overflow-hidden h-fit"
             >
-              <div className="bg-primary-green px-6 py-4">
+              <div className="bg-forest-green px-6 py-4">
                 <h3 className="text-xl font-bold text-white">
                   {category.category}
                 </h3>
