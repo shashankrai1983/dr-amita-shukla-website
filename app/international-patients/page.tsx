@@ -1,5 +1,5 @@
 // app/international-patients/page.tsx
-// Changes: Created comprehensive international patients page with all provided content, following the same structure and design as other pages
+// Changes: Removed the Key Stats section as requested
 
 "use client";
 
@@ -43,7 +43,6 @@ import {
 
 export default function InternationalPatients() {
   const heroRef = useRef<HTMLDivElement>(null);
-  const statsRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const journeyRef = useRef<HTMLDivElement>(null);
   const facilitiesRef = useRef<HTMLDivElement>(null);
@@ -52,7 +51,6 @@ export default function InternationalPatients() {
   const faqRef = useRef<HTMLDivElement>(null);
   
   const isHeroInView = useInView(heroRef, { once: true });
-  const isStatsInView = useInView(statsRef, { once: true });
   const isServicesInView = useInView(servicesRef, { once: true });
   const isJourneyInView = useInView(journeyRef, { once: true });
   const isFacilitiesInView = useInView(facilitiesRef, { once: true });
@@ -389,38 +387,8 @@ export default function InternationalPatients() {
         />
       </section>
 
-      {/* Key Stats */}
-      <section 
-        ref={statsRef}
-        className="py-16 bg-white"
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { stat: "50+", label: "Countries Served", icon: <Globe className="h-8 w-8 text-primary-green" /> },
-              { stat: "10+", label: "Years Experience", icon: <Star className="h-8 w-8 text-primary-green" /> },
-              { stat: "24/7", label: "International Support", icon: <Headphones className="h-8 w-8 text-primary-green" /> }
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                className="text-center bg-accent-cream/30 p-6 rounded-xl shadow-warm"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isStatsInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <div className="flex justify-center mb-4">
-                  {item.icon}
-                </div>
-                <div className="text-3xl font-bold text-primary-green mb-2">{item.stat}</div>
-                <p className="text-text-brown/70">{item.label}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Why Choose Us */}
-      <section className="py-16 bg-accent-cream/30">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 green-title-text">
@@ -432,9 +400,9 @@ export default function InternationalPatients() {
             {whyChooseUs.map((item, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-warm text-center"
+                className="bg-accent-cream/30 p-6 rounded-xl shadow-warm text-center"
                 initial={{ opacity: 0, y: 20 }}
-                animate={isStatsInView ? { opacity: 1, y: 0 } : {}}
+                animate={isHeroInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex justify-center mb-4">
@@ -451,7 +419,7 @@ export default function InternationalPatients() {
       {/* Specialized Services */}
       <section 
         ref={servicesRef}
-        className="py-16 bg-white"
+        className="py-16 bg-accent-cream/30"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -469,7 +437,7 @@ export default function InternationalPatients() {
             {specializedServices.map((service, index) => (
               <motion.div
                 key={index}
-                className="bg-accent-cream/30 p-6 rounded-xl shadow-warm"
+                className="bg-white p-6 rounded-xl shadow-warm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -500,7 +468,7 @@ export default function InternationalPatients() {
       {/* Patient Journey */}
       <section 
         ref={journeyRef}
-        className="py-16 bg-accent-cream/30"
+        className="py-16 bg-white"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -518,7 +486,7 @@ export default function InternationalPatients() {
             {journeySteps.map((step, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-warm"
+                className="bg-accent-cream/30 p-6 rounded-xl shadow-warm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isJourneyInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -546,7 +514,7 @@ export default function InternationalPatients() {
       {/* Healthcare Facilities */}
       <section 
         ref={facilitiesRef}
-        className="py-16 bg-white"
+        className="py-16 bg-accent-cream/30"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -564,7 +532,7 @@ export default function InternationalPatients() {
             {facilities.map((facility, index) => (
               <motion.div
                 key={index}
-                className="bg-accent-cream/30 p-6 rounded-xl shadow-warm"
+                className="bg-white p-6 rounded-xl shadow-warm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isFacilitiesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -594,7 +562,7 @@ export default function InternationalPatients() {
       {/* Support Services */}
       <section 
         ref={supportRef}
-        className="py-16 bg-accent-cream/30"
+        className="py-16 bg-white"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -642,7 +610,7 @@ export default function InternationalPatients() {
             ].map((support, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-warm"
+                className="bg-accent-cream/30 p-6 rounded-xl shadow-warm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isSupportInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -668,7 +636,7 @@ export default function InternationalPatients() {
       {/* Patient Testimonials */}
       <section 
         ref={testimonialsRef}
-        className="py-16 bg-white"
+        className="py-16 bg-accent-cream/30"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -686,7 +654,7 @@ export default function InternationalPatients() {
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
-                className="bg-accent-cream/30 p-6 rounded-xl shadow-warm"
+                className="bg-white p-6 rounded-xl shadow-warm"
                 initial={{ opacity: 0, y: 20 }}
                 animate={isTestimonialsInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -705,7 +673,7 @@ export default function InternationalPatients() {
       {/* FAQ Section */}
       <section 
         ref={faqRef}
-        className="py-16 bg-accent-cream/30"
+        className="py-16 bg-white"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -730,7 +698,7 @@ export default function InternationalPatients() {
                 <AccordionItem 
                   key={index} 
                   value={`item-${index}`} 
-                  className="bg-white rounded-xl shadow-warm border-0 px-6"
+                  className="bg-accent-cream/30 rounded-xl shadow-warm border-0 px-6"
                 >
                   <AccordionTrigger className="text-left text-text-brown hover:no-underline py-6">
                     {faq.question}
@@ -739,7 +707,7 @@ export default function InternationalPatients() {
                     {faq.answer}
                   </AccordionContent>
                 </AccordionItem>
-              ))}
+                ))}
             </Accordion>
           </motion.div>
         </div>
