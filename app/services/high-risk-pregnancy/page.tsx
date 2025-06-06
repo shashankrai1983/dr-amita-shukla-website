@@ -480,8 +480,8 @@ export default function HighRiskPregnancy() {
             >
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-warm-lg">
                 <Image
-                  src="https://images.pexels.com/photos/3845152/pexels-photo-3845152.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="Advanced medical monitoring"
+                  src="https://i.ibb.co/rG65J8x6/high-risk-pregnancy-advance-machine.png"
+                  alt="High-risk pregnancy advanced monitoring equipment"
                   fill
                   className="object-cover"
                 />
