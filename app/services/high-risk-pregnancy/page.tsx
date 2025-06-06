@@ -242,8 +242,8 @@ export default function HighRiskPregnancy() {
             >
               <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-warm-lg">
                 <Image
-                  src="https://images.pexels.com/photos/1280804/pexels-photo-1280804.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="High-risk pregnancy care"
+                  src="https://i.ibb.co/ycn9SnhQ/High-Risk-Pregnancy-Care.png"
+                  alt="High-risk pregnancy care with Dr. Amita Shukla"
                   fill
                   className="object-cover"
                 />
