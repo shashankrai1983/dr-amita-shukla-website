@@ -1,5 +1,5 @@
 // components/home/faq-section.tsx
-// Changes: Updated FAQ layout to 2-column on desktop, single column on mobile
+// Changes: Updated FAQ category headings to have green background with white text
 "use client";
 
 import { useRef } from 'react';
@@ -179,23 +179,27 @@ const FaqSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="bg-accent-cream/30 rounded-xl shadow-warm p-6 h-fit"
+              className="bg-accent-cream/30 rounded-xl shadow-warm overflow-hidden h-fit"
             >
-              <h3 className="text-xl font-bold text-text-brown mb-4">
-                {category.category}
-              </h3>
-              <Accordion type="single" collapsible className="w-full">
-                {category.questions.map((faq, qIndex) => (
-                  <AccordionItem key={qIndex} value={`item-${index}-${qIndex}`} className="border-b border-accent-cream/50">
-                    <AccordionTrigger className="text-left text-text-brown hover:no-underline text-sm">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-text-brown/80 pb-4 text-sm">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+              <div className="bg-primary-green px-6 py-4">
+                <h3 className="text-xl font-bold text-white">
+                  {category.category}
+                </h3>
+              </div>
+              <div className="p-6">
+                <Accordion type="single" collapsible className="w-full">
+                  {category.questions.map((faq, qIndex) => (
+                    <AccordionItem key={qIndex} value={`item-${index}-${qIndex}`} className="border-b border-accent-cream/50">
+                      <AccordionTrigger className="text-left text-text-brown hover:no-underline text-sm">
+                        {faq.question}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-text-brown/80 pb-4 text-sm">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
             </motion.div>
           ))}
         </div>
