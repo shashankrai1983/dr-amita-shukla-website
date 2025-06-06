@@ -760,12 +760,12 @@ export default function InternationalPatients() {
               <div className="bg-white p-6 rounded-xl shadow-warm">
                 <Phone className="h-8 w-8 text-primary-green mx-auto mb-4" />
                 <h3 className="font-bold text-text-brown mb-2">24/7 Helpline</h3>
-                <p className="text-primary-green">+91-522-XXXX-XXXX</p>
+                <p className="text-primary-green">+91 8303222222</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-warm">
                 <Mail className="h-8 w-8 text-primary-green mx-auto mb-4" />
                 <h3 className="font-bold text-text-brown mb-2">Email Support</h3>
-                <p className="text-primary-green">international@scttrust.com</p>
+                <p className="text-primary-green">amitaobg@gmail.com</p>
               </div>
               <div className="bg-white p-6 rounded-xl shadow-warm">
                 <Video className="h-8 w-8 text-primary-green mx-auto mb-4" />
@@ -781,7 +781,7 @@ export default function InternationalPatients() {
                 </Link>
               </Button>
               <Button asChild variant="outline" className="btn-outline">
-                <a href="tel:+91522XXXXXXX">
+                <a href="tel:+91 8303222222">
                   <Phone className="mr-2 h-4 w-4" /> Call Now
                 </a>
               </Button>
