@@ -25,6 +25,8 @@ const navLinks = [
     ]
   },
   { title: 'Blog', href: '/blog', icon: FileText },
+  { title: 'Packages', href: '/packages', icon: FileText },
+  { title: 'Gallery', href: '/gallery', icon: FileText },
   { title: 'Contact', href: '/contact', icon: Phone },
 ];
 
