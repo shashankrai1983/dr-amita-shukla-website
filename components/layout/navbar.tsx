@@ -20,12 +20,10 @@ const navLinks = [
       { title: 'PCOS/PCOD Treatment', href: '/services/pcos-pcod' },
       { title: 'Laparoscopy', href: '/services/laparoscopy' },
       { title: 'Antenatal Care', href: '/services/antenatal-care' },
-      { title: 'Well Women Health', href: '/services/well-women-health' },
-      { title: 'Health Packages', href: '/packages' }
+      { title: 'Well Women Health', href: '/services/well-women-health' }
     ]
   },
   { title: 'Blog', href: '/blog', icon: FileText },
-  { title: 'Packages', href: '/packages', icon: FileText },
   { title: 'Gallery', href: '/gallery', icon: FileText },
   { title: 'Contact', href: '/contact', icon: Phone },
 ];

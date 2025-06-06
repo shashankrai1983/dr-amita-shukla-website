@@ -67,8 +67,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/packages" className="hover:text-primary-green transition-colors">
-                  Health Packages
+                <Link href="/faq" className="hover:text-primary-green transition-colors">
+                  FAQs
                 </Link>
               </li>
             </ul>
@@ -96,11 +96,6 @@ const Footer = () => {
               <li>
                 <Link href="/gallery" className="hover:text-primary-green transition-colors">
                   Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="/packages" className="hover:text-primary-green transition-colors">
-                  Packages
                 </Link>
               </li>
               <li>
