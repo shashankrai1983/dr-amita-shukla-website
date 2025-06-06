@@ -1,5 +1,5 @@
 // components/home/faq-section.tsx
-// Changes: Created new FAQ section component with 4 categories of questions and dummy answers
+// Changes: Updated FAQ layout to 2-column on desktop, single column on mobile
 "use client";
 
 import { useRef } from 'react';
@@ -172,14 +172,14 @@ const FaqSection = () => {
           </motion.p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           {faqs.map((category, index) => (
             <motion.div
               key={category.category}
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
-              className="bg-accent-cream/30 rounded-xl shadow-warm p-6"
+              className="bg-accent-cream/30 rounded-xl shadow-warm p-6 h-fit"
             >
               <h3 className="text-xl font-bold text-text-brown mb-4">
                 {category.category}
@@ -187,10 +187,10 @@ const FaqSection = () => {
               <Accordion type="single" collapsible className="w-full">
                 {category.questions.map((faq, qIndex) => (
                   <AccordionItem key={qIndex} value={`item-${index}-${qIndex}`} className="border-b border-accent-cream/50">
-                    <AccordionTrigger className="text-left text-text-brown hover:no-underline">
+                    <AccordionTrigger className="text-left text-text-brown hover:no-underline text-sm">
                       {faq.question}
                     </AccordionTrigger>
-                    <AccordionContent className="text-text-brown/80 pb-4">
+                    <AccordionContent className="text-text-brown/80 pb-4 text-sm">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
