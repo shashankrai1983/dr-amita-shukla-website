@@ -1,9 +1,9 @@
 // components/home/faq-section.tsx
-// Changes: Updated FAQ category headings to use jungle green (forest-green) background instead of olive green
+// Changes: Fixed FAQ section not appearing on physical mobile devices by replacing useInView hook with whileInView prop on motion components for more reliable animation triggering
+
 "use client";
 
-import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Accordion,
   AccordionContent,
@@ -144,20 +144,15 @@ const faqs = [
 ];
 
 const FaqSection = () => {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
-
   return (
-    <section
-      ref={sectionRef}
-      className="py-20 bg-white relative"
-    >
+    <section className="py-20 bg-white relative">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <motion.h2
             className="text-3xl md:text-4xl font-bold mb-4 green-title-text"
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5 }}
           >
             Frequently Asked Questions
@@ -165,7 +160,8 @@ const FaqSection = () => {
           <motion.p
             className="text-lg text-text-brown/80"
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Find answers to common questions about our services, appointments, and hospital.
@@ -177,7 +173,8 @@ const FaqSection = () => {
             <motion.div
               key={category.category}
               initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
               className="bg-accent-cream/30 rounded-xl shadow-warm overflow-hidden h-fit"
             >
